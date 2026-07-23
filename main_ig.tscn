@@ -1,3 +1,41 @@
 [gd_scene format=3 uid="uid://bauj40l575up6"]
 
+[ext_resource type="PackedScene" uid="uid://r8jquw60b61" path="res://character.tscn" id="1_3dkdv"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h71pn"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_0qsrx"]
+sky_material = SubResource("ProceduralSkyMaterial_h71pn")
+
+[sub_resource type="Environment" id="Environment_3pd4e"]
+background_mode = 2
+sky = SubResource("Sky_0qsrx")
+tonemap_mode = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_amqye"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3dkdv"]
+
 [node name="Node3D" type="Node3D" unique_id=1256432373]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1533874501]
+environment = SubResource("Environment_3pd4e")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1450514934]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CharacterBody3D" parent="." unique_id=741813192 instance=ExtResource("1_3dkdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.030533, 0.06437433, 2.3505058)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=64424704]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1890549159]
+transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 50, 0, 0, 0)
+shape = SubResource("BoxShape3D_amqye")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1827918271]
+transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 50, 0, 0, 0)
+mesh = SubResource("BoxMesh_3dkdv")
