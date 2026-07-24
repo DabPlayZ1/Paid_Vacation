@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c6iy7x6uabb6f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lyc0q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0uuif"]
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=2132290993]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=764551238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.1851219, 0, 0, 0)
+mesh = SubResource("BoxMesh_lyc0q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1392433188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.19718659, 0, 0, 0)
+shape = SubResource("BoxShape3D_0uuif")
