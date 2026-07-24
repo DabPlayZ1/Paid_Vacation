@@ -32,7 +32,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _physics_process(delta: float) -> void:
-	var directions : Vector2 = Input.get_vector("Move_Left", "Move_Right", "Move_Forward", "Move_Backwards")
+	var directions : Vector2 = Input.get_vector("Move_Left", "Move_Right", "Move_Forward", "Move_Backward")
 	var movement : Vector3 = Vector3(directions.x, 0, directions.y).normalized()
 	var local_movement : Vector3 = transform.basis * movement
 	#velocity.x += local_movement.x * speed * delta
