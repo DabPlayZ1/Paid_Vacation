@@ -37,12 +37,10 @@ func _input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	if !can_move:
 		return
-		
+	
 	if %seecast.is_colliding():
 		var target = %seecast.get_collider()
 		if target.has_method("Interact"):
-			if %keypad_body.can_interact == false:
-				return
 			%"E interact".visible = true
 			if Input.is_action_just_pressed("E_Interact"):
 				target.Interact()

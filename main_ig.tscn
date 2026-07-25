@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://upuvwsfjulwp" path="res://keypad.glb" id="4_3pd4e"]
 [ext_resource type="Script" uid="uid://c5dy40o4pl8fe" path="res://keypad_body.gd" id="4_ogtir"]
 [ext_resource type="Script" uid="uid://cw1jwgww2ri3b" path="res://dialogue.gd" id="6_7mixf"]
+[ext_resource type="Script" uid="uid://8cefiomuyaa7" path="res://mirrah.gd" id="6_s8ikn"]
 [ext_resource type="Texture2D" uid="uid://5hrvhw4bd133" path="res://keypad_0.png" id="7_5qy72"]
 [ext_resource type="Texture2D" uid="uid://dw4yi0t3rgfsv" path="res://keypad_9.png" id="8_dqs25"]
 [ext_resource type="Texture2D" uid="uid://uc7oitia7b6v" path="res://keypad_8.png" id="9_6lp50"]
@@ -138,11 +139,13 @@ transform = Transform3D(-0.48582825, 0, 0.11819858, 0, 0.5, 0, -0.11819858, 0, -
 [node name="StaticBody3D" type="StaticBody3D" parent="sink" unique_id=90715144]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="sink/StaticBody3D" unique_id=114163080]
-transform = Transform3D(1.834208, 0, 5.9604645e-08, 0, -2.112572, 0, 0, 0, 1.7448798, 0, 0, 0)
+transform = Transform3D(1.834208, 0, 2.9802322e-08, 0, -0.9682412, 0, 0, 0, 1.7448798, 0, 0, 0)
 shape = SubResource("SphereShape3D_3pd4e")
 
 [node name="keypad_body" type="StaticBody3D" parent="." unique_id=510277034]
 unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("4_ogtir")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="keypad_body" unique_id=762215232]
@@ -153,9 +156,13 @@ shape = SubResource("BoxShape3D_5qy72")
 transform = Transform3D(1.1924881e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, 1.1924881e-09, -1.4766557, 2.863853, -4.8525496)
 
 [node name="mirrah" type="StaticBody3D" parent="." unique_id=1105766770]
+unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("6_s8ikn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="mirrah" unique_id=1424786310]
-transform = Transform3D(0.6061005, 0, 0, 0, 0.040070504, 2.46016, 0, -2.295641, 0.042942196, -9.457922, 3.6263719, -3.0387669)
+transform = Transform3D(0.42427033, 0, 0, 0, 0.040070504, 2.46016, 0, -2.295641, 0.042942196, -9.322005, 3.7992325, -3.0387669)
 mesh = SubResource("BoxMesh_ogtir")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="mirrah" unique_id=1852885474]
@@ -182,6 +189,7 @@ size_flags_horizontal = 4
 text = "Interact (E)"
 
 [node name="Dialogue" type="Control" parent="." unique_id=1814084174]
+unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -375,9 +383,9 @@ theme_override_font_sizes/normal_font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="Keypad/0" to="keypad_body" method="_on__pressed"]
-[connection signal="pressed" from="Keypad/9" to="keypad_body" method="_on_2_pressed"]
-[connection signal="pressed" from="Keypad/8" to="keypad_body" method="_on__pressed"]
+[connection signal="pressed" from="Keypad/0" to="keypad_body" method="_on_0_pressed"]
+[connection signal="pressed" from="Keypad/9" to="keypad_body" method="_on_9_pressed"]
+[connection signal="pressed" from="Keypad/8" to="keypad_body" method="_on_8_pressed"]
 [connection signal="pressed" from="Keypad/7" to="keypad_body" method="_on_7_pressed"]
 [connection signal="pressed" from="Keypad/6" to="keypad_body" method="_on_6_pressed"]
 [connection signal="pressed" from="Keypad/5" to="keypad_body" method="_on_5_pressed"]

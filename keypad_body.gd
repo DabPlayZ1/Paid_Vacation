@@ -16,6 +16,8 @@ func check_code():
 	if code.length() == 4:
 		if code == "1125":
 			%Code.modulate = Color.GREEN
+			await get_tree().create_timer(0.6).timeout
+			%Code.text = "Correct!"
 			await get_tree().create_timer(1.0).timeout
 			%Keypad.hide()
 			%Player.can_move = true
@@ -24,6 +26,10 @@ func check_code():
 		else:
 			await get_tree().create_timer(1).timeout
 			%Code.text = "Incorrect"
+			%Code.modulate = Color.RED
+			await get_tree().create_timer(1).timeout
+			%Code.text = ""
+			%Code.modulate = Color.WHITE
 			print("Wrong")
 			%Keypad.hide()
 			%Player.can_move = true
