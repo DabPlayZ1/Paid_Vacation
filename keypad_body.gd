@@ -24,7 +24,6 @@ func check_code():
 			%Keypad.hide()
 			%Player.can_move = true
 			print("Correct")
-			%temp_hammer.show()
 		else:
 			can_interact = false
 			await get_tree().create_timer(0.3).timeout

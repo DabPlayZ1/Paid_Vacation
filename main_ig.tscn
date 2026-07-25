@@ -34,6 +34,10 @@
 [ext_resource type="PackedScene" uid="uid://bik2x64p1yp81" path="res://hammer.glb" id="31_p8lip"]
 [ext_resource type="Script" uid="uid://drruwd42yx4wd" path="res://temp_vents.gd" id="32_3fuil"]
 [ext_resource type="Texture2D" uid="uid://c7fd7cejnxxa2" path="res://vent.jpg" id="34_822o5"]
+[ext_resource type="PackedScene" uid="uid://cmjwwon83efj1" path="res://clock.glb" id="35_jnvf1"]
+[ext_resource type="PackedScene" uid="uid://bcwx3lnklf67q" path="res://screwdriver.glb" id="36_ua0eg"]
+[ext_resource type="PackedScene" uid="uid://dsy5fs8r662ip" path="res://openaid.glb" id="37_6r86d"]
+[ext_resource type="PackedScene" uid="uid://b131o5egriqcb" path="res://closedaid.glb" id="38_22nfc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h71pn"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -461,6 +465,18 @@ mesh = SubResource("BoxMesh_p8lip")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="temp_vents" unique_id=1805200830]
 shape = SubResource("BoxShape3D_822o5")
+
+[node name="clock" parent="." unique_id=959752890 instance=ExtResource("35_jnvf1")]
+transform = Transform3D(0.143, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -9.195931, 3.7789779, -2.8925843)
+
+[node name="screwdriver" parent="." unique_id=1680500195 instance=ExtResource("36_ua0eg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5682755, 1.8238795, 17.986713)
+
+[node name="openaid" parent="." unique_id=1537444007 instance=ExtResource("37_6r86d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.480998, 1, -0.13630676)
+
+[node name="closedaid" parent="." unique_id=177634385 instance=ExtResource("38_22nfc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0366163, 1.0000005, 17.74266)
 
 [connection signal="pressed" from="Keypad/0" to="keypad_body" method="_on_0_pressed"]
 [connection signal="pressed" from="Keypad/9" to="keypad_body" method="_on_9_pressed"]
