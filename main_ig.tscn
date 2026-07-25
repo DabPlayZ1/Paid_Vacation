@@ -31,7 +31,9 @@
 [ext_resource type="Texture2D" uid="uid://ddfgl0jj8w3l7" path="res://Time_Poster.png" id="29_o5ys2"]
 [ext_resource type="Script" uid="uid://bvc4vn33hb2e5" path="res://temp_hammer.gd" id="30_dkt1i"]
 [ext_resource type="Script" uid="uid://bijeitgg7glm0" path="res://temp_glass.gd" id="31_b4wvp"]
+[ext_resource type="PackedScene" uid="uid://bik2x64p1yp81" path="res://hammer.glb" id="31_p8lip"]
 [ext_resource type="Script" uid="uid://drruwd42yx4wd" path="res://temp_vents.gd" id="32_3fuil"]
+[ext_resource type="Texture2D" uid="uid://c7fd7cejnxxa2" path="res://vent.jpg" id="34_822o5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h71pn"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -88,15 +90,19 @@ orientation = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b4wvp"]
 albedo_texture = ExtResource("29_o5ys2")
 
-[sub_resource type="BoxMesh" id="BoxMesh_b4wvp"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_3fuil"]
+size = Vector3(0.6899719, 0.21279907, 1.204834)
 
 [sub_resource type="BoxMesh" id="BoxMesh_3fuil"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p8lip"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jnvf1"]
+albedo_texture = ExtResource("34_822o5")
+uv1_scale = Vector3(3, 2, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_p8lip"]
+material = SubResource("StandardMaterial3D_jnvf1")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_822o5"]
 
@@ -149,7 +155,7 @@ shape = SubResource("BoxShape3D_3pd4e")
 [node name="Bathroom2" parent="bathroom_body" unique_id=98115144 instance=ExtResource("2_h71pn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.283107, -0.3441116, 4.907204)
 
-[node name="Cube_001" parent="bathroom_body/Bathroom2" index="1" unique_id=2085420990]
+[node name="Cube_001" parent="bathroom_body/Bathroom2" index="1" unique_id=1738970602]
 transform = Transform3D(-1, -1.509958e-07, 0, 1.509958e-07, -1, 0, 0, 0, 1, 8, 9.000001, 0)
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1313865217]
@@ -415,19 +421,18 @@ surface_material_override/0 = SubResource("StandardMaterial3D_b4wvp")
 
 [node name="temp_hammer" type="StaticBody3D" parent="." unique_id=160357930]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5087276, 0, -4.3575583)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6645012, 0.198017, 6.044302)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("30_dkt1i")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="temp_hammer" unique_id=1313138656]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.002214, 1.398164, 0)
-mesh = SubResource("BoxMesh_b4wvp")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="temp_hammer" unique_id=408230551]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.003924, 1.3956448, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005050659, 0.0043182373, -0.10241699)
 shape = SubResource("BoxShape3D_3fuil")
+debug_color = Color(0.97099453, 0, 0.45418566, 0.41960785)
+
+[node name="hammer" parent="temp_hammer" unique_id=1159301098 instance=ExtResource("31_p8lip")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 
 [node name="temp_glass" type="StaticBody3D" parent="." unique_id=2140052013]
 unique_name_in_owner = true
@@ -451,6 +456,7 @@ collision_mask = 2
 script = ExtResource("32_3fuil")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="temp_vents" unique_id=1557849842]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.07231063, 0)
 mesh = SubResource("BoxMesh_p8lip")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="temp_vents" unique_id=1805200830]
