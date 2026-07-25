@@ -38,6 +38,9 @@
 [ext_resource type="PackedScene" uid="uid://bcwx3lnklf67q" path="res://screwdriver.glb" id="36_ua0eg"]
 [ext_resource type="PackedScene" uid="uid://dsy5fs8r662ip" path="res://openaid.glb" id="37_6r86d"]
 [ext_resource type="PackedScene" uid="uid://b131o5egriqcb" path="res://closedaid.glb" id="38_22nfc"]
+[ext_resource type="PackedScene" uid="uid://c6dyk3fmcmtv8" path="res://plane.glb" id="39_fhgrq"]
+[ext_resource type="PackedScene" uid="uid://bjco64l0b5s42" path="res://dot.glb" id="40_aogl0"]
+[ext_resource type="PackedScene" uid="uid://35h0gwcv5xeb" path="res://dash.glb" id="41_qi6mx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h71pn"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -477,6 +480,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.480998, 1, -0.13630676)
 
 [node name="closedaid" parent="." unique_id=177634385 instance=ExtResource("38_22nfc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0366163, 1.0000005, 17.74266)
+
+[node name="plane" parent="." unique_id=801856389 instance=ExtResource("39_fhgrq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0761471, 23.590458, 46.306404)
+
+[node name="dot" parent="." unique_id=542758518 instance=ExtResource("40_aogl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.49764, 1.5, 14.333315)
+
+[node name="dash" parent="." unique_id=685350801 instance=ExtResource("41_qi6mx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.70617, 1.4999981, 20.814846)
 
 [connection signal="pressed" from="Keypad/0" to="keypad_body" method="_on_0_pressed"]
 [connection signal="pressed" from="Keypad/9" to="keypad_body" method="_on_9_pressed"]
