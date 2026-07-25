@@ -1,6 +1,7 @@
 extends StaticBody3D
 
 var can_interact = true
+var correct = true
 
 var code = ""
 
@@ -23,6 +24,7 @@ func check_code():
 			%Player.can_move = true
 			can_interact = false
 			print("Correct")
+			%temp_hammer.show()
 		else:
 			await get_tree().create_timer(1).timeout
 			%Code.text = "Incorrect"

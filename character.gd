@@ -1,10 +1,12 @@
 extends CharacterBody3D
 
+var has_hammer = false
+var has_screwdriver = false
 var sensitivity : float = 0.5
 @export var captured : bool = true
 var speed : int = 10
 var acceleration : int  = 67
-var jumpheight : int = 33
+var jumpheight : int = 25
 var gravity : int = 100
 var coyotetimer : float = 0.0
 var coyotetime : float = 0.09
@@ -40,7 +42,7 @@ func _physics_process(delta: float) -> void:
 	
 	if %seecast.is_colliding():
 		var target = %seecast.get_collider()
-		if target.has_method("Interact"):
+		if target != null and target.has_method("Interact"):
 			%"E interact".visible = true
 			if Input.is_action_just_pressed("E_Interact"):
 				target.Interact()

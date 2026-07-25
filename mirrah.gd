@@ -7,8 +7,12 @@ var aint_ready : bool = true
 var talking = false
 
 func Interact():
+	if %Player.has_hammer == true:
+		%mirrah.hide()
+		%temp_glass.show()
+		aint_ready = false
 	if aint_ready:
-		var talking = true
+		talking = true
 		if talking == true:
 			%"E interact".hide()
 		%Dialogue.diagtext = not_ready
@@ -16,4 +20,4 @@ func Interact():
 		%Dialogue.dialogueon = true
 		%Player.can_move = false
 	print("Yes")
-	var talking = false
+	talking = false
