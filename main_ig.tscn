@@ -1401,6 +1401,7 @@ mesh = SubResource("BoxMesh_0p2k3")
 shape = SubResource("BoxShape3D_xxymk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1994492731]
+visible = false
 script = ExtResource("54_8a4wy")
 
 [node name="Timer" type="Timer" parent="CanvasLayer" unique_id=789039149]
