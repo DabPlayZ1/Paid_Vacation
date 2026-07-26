@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends MeshInstance3D
 
 var DONE : Array = [
 	"I can escape through the vents now!"
@@ -10,4 +10,4 @@ func Interact():
 	fwee = true
 	%Player.has_screwdriver = true
 	%safe.hide()
-	%closedaid.show()
+	%closedaidy.show()

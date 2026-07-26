@@ -25,8 +25,9 @@ func check_code():
 			%Player.can_move = true
 			correct = true
 			queue_free()
-			%safe.queue_free()
-			%closedaid.show()
+			%safe2.queue_free()
+			%closedaidy.show()
+			%CollisionShape3D.disabled = false
 			print("Correct")
 		else:
 			can_interact = false

@@ -34,9 +34,11 @@
 [ext_resource type="Script" uid="uid://drruwd42yx4wd" path="res://temp_vents.gd" id="32_3fuil"]
 [ext_resource type="Script" uid="uid://c36uwjjad4f6d" path="res://closedaid.gd" id="33_fhgrq"]
 [ext_resource type="Texture2D" uid="uid://c7fd7cejnxxa2" path="res://vent.jpg" id="34_822o5"]
+[ext_resource type="Script" uid="uid://bhg4ak8plit3f" path="res://openaidy.gd" id="34_qi6mx"]
 [ext_resource type="PackedScene" uid="uid://cmjwwon83efj1" path="res://clock.glb" id="35_jnvf1"]
 [ext_resource type="PackedScene" uid="uid://bcwx3lnklf67q" path="res://screwdriver.glb" id="36_ua0eg"]
 [ext_resource type="PackedScene" uid="uid://dsy5fs8r662ip" path="res://openaid.glb" id="37_6r86d"]
+[ext_resource type="PackedScene" uid="uid://cwpaqqi0bjqlv" path="res://safe.glb" id="37_infwv"]
 [ext_resource type="PackedScene" uid="uid://b131o5egriqcb" path="res://closedaid.glb" id="38_22nfc"]
 [ext_resource type="PackedScene" uid="uid://c6dyk3fmcmtv8" path="res://plane.glb" id="39_fhgrq"]
 [ext_resource type="PackedScene" uid="uid://bjco64l0b5s42" path="res://dot.glb" id="40_aogl0"]
@@ -100,12 +102,11 @@ albedo_texture = ExtResource("29_o5ys2")
 [sub_resource type="BoxShape3D" id="BoxShape3D_3fuil"]
 size = Vector3(0.6899719, 0.21279907, 1.204834)
 
-[sub_resource type="BoxMesh" id="BoxMesh_3fuil"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_fhgrq"]
 size = Vector3(6.0544434, 7.248413, 17.986938)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p8lip"]
+size = Vector3(1.7711182, 0.84973145, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jnvf1"]
 albedo_texture = ExtResource("34_822o5")
@@ -183,7 +184,6 @@ shape = SubResource("SphereShape3D_3pd4e")
 
 [node name="keypad_body" type="StaticBody3D" parent="." unique_id=510277034]
 unique_name_in_owner = true
-visible = false
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("4_ogtir")
@@ -193,7 +193,7 @@ transform = Transform3D(1.1924879e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, 1.1924879e-09
 shape = SubResource("BoxShape3D_5qy72")
 
 [node name="keypad" parent="keypad_body" unique_id=276040221 instance=ExtResource("4_3pd4e")]
-transform = Transform3D(-2.6226832e-09, 0, -0.06, 0, 0.06, 0, 0.06, 0, -2.6226832e-09, -1.485415, 0.68175304, -3.793659)
+transform = Transform3D(-2.6226832e-09, 0, -0.06, 0, 0.06, 0, 0.06, 0, -2.6226832e-09, -1.485415, 0.59157157, -3.9294806)
 
 [node name="mirrah" type="StaticBody3D" parent="." unique_id=1105766770]
 unique_name_in_owner = true
@@ -445,48 +445,56 @@ debug_color = Color(0.97099453, 0, 0.45418566, 0.41960785)
 [node name="hammer" parent="temp_hammer" unique_id=1159301098 instance=ExtResource("31_p8lip")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 
-[node name="temp_glass" type="StaticBody3D" parent="." unique_id=2140052013]
+[node name="temp_glass" type="Node3D" parent="." unique_id=817571569]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5959675, 2.8572836, -4.0529795)
+
+[node name="closedaidy" type="StaticBody3D" parent="temp_glass" unique_id=1856267814]
+unique_name_in_owner = true
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0.0926168, -2.7251484, -0.34248257)
+visible = false
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("33_fhgrq")
 
-[node name="safe" type="MeshInstance3D" parent="temp_glass" unique_id=649911937]
+[node name="closedaid" parent="temp_glass/closedaidy" unique_id=177634385 instance=ExtResource("38_22nfc")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09498274, -2.211758, -0.32602596)
-visible = false
-mesh = SubResource("BoxMesh_3fuil")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017665863, 0.20725477, -0.25557804)
 
-[node name="closedaid" parent="temp_glass" unique_id=177634385 instance=ExtResource("38_22nfc")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="temp_glass/closedaidy" unique_id=160398738]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11096573, 2.5100098, 0.053710938)
+shape = SubResource("BoxShape3D_fhgrq")
+disabled = true
+
+[node name="openaidy" type="StaticBody3D" parent="temp_glass" unique_id=120598015]
 unique_name_in_owner = true
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0.06705904, -2.704423, -0.3407159)
 visible = false
-script = ExtResource("33_fhgrq")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="temp_glass/closedaid" unique_id=1856267814]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017665863, -0.20725489, 0.25557804)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("34_qi6mx")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="temp_glass/closedaid/StaticBody3D" unique_id=160398738]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11096573, 2.5100098, 0.053710938)
-shape = SubResource("BoxShape3D_fhgrq")
-
-[node name="openaid" parent="temp_glass" unique_id=1537444007 instance=ExtResource("37_6r86d")]
+[node name="openaid" parent="temp_glass/openaidy" unique_id=1537444007 instance=ExtResource("37_6r86d")]
 unique_name_in_owner = true
-transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0.041501284, -2.6836975, -0.3389492)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017665863, 0.20725489, -0.2555771)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="temp_glass/openaid" unique_id=120598015]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017665863, -0.20725489, 0.2555771)
-collision_layer = 2
-collision_mask = 2
+[node name="screwdriver" parent="temp_glass/openaidy/openaid" unique_id=1680500195 instance=ExtResource("36_ua0eg")]
+unique_name_in_owner = true
+transform = Transform3D(-2.6226832e-08, 0, -0.59999996, 0, 0.59999996, 0, 0.59999996, 0, -2.6226832e-08, 0.60544586, 1.3398242, -0.5791702)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="temp_glass/openaid/StaticBody3D" unique_id=263725191]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="temp_glass/openaidy" unique_id=263725191]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11096573, 3.1242065, -0.21795464)
 shape = SubResource("BoxShape3D_fhgrq")
+disabled = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="temp_glass" unique_id=1453559077]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.1932845, -0.34200764)
+[node name="safe2" parent="temp_glass" unique_id=1496649528 instance=ExtResource("37_infwv")]
+unique_name_in_owner = true
+transform = Transform3D(-1.7484556e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.7484556e-08, 0.042930722, -2.3077722, -0.37177372)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="temp_glass/safe2" unique_id=1453559077]
+transform = Transform3D(-1.0927847e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.0927847e-07, 0.07441521, 0.09838343, -0.04135394)
 shape = SubResource("BoxShape3D_p8lip")
 
 [node name="temp_vents" type="StaticBody3D" parent="." unique_id=1327485406]
@@ -505,9 +513,6 @@ shape = SubResource("BoxShape3D_822o5")
 
 [node name="clock" parent="." unique_id=959752890 instance=ExtResource("35_jnvf1")]
 transform = Transform3D(0.143, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -9.195931, 3.7789779, -2.8925843)
-
-[node name="screwdriver" parent="." unique_id=1680500195 instance=ExtResource("36_ua0eg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5682755, 1.8238795, 17.986713)
 
 [node name="plane" parent="." unique_id=801856389 instance=ExtResource("39_fhgrq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0761471, 23.590458, 46.306404)

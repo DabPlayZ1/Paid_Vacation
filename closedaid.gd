@@ -1,4 +1,4 @@
-extends Node3D
+extends StaticBody3D
 
 var DONE : Array = [
 	"I can escape through the vents now!"
@@ -7,7 +7,10 @@ var DONE : Array = [
 var fwee = false
 
 func Interact():
+	%CollisionShape3D2.disabled = false
+	%CollisionShape3D.disabled = true
 	fwee = true
 	%Player.has_screwdriver = true
 	%closedaid.hide()
-	%openaid.show()
+	%openaidy.show()
+	%screwdriver.show()
