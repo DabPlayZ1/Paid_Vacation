@@ -1,7 +1,7 @@
 extends StaticBody3D
 
 var can_interact = true
-var correct = true
+var correct = false
 
 var code = ""
 
@@ -23,6 +23,10 @@ func check_code():
 			await get_tree().create_timer(1.0).timeout
 			%Keypad.hide()
 			%Player.can_move = true
+			correct = true
+			queue_free()
+			%safe.queue_free()
+			%closedaid.show()
 			print("Correct")
 		else:
 			can_interact = false
