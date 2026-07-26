@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://c2341w4ml558h"]
+
+[ext_resource type="Script" uid="uid://deh0i36w2ybdq" path="res://credits.gd" id="1_nm7lk"]
+
+[node name="Credits" type="Control" unique_id=392293821]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 649.0
+script = ExtResource("1_nm7lk")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1066055091]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1372239364]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "Paid Vacation
+
+
+
+
+
+
+
+
+Made By
+
+Dab & Char
+
+
+
+
+
+
+
+Scripting
+
+Dab
+
+
+
+
+
+
+Modelling
+
+Char
+
+
+
+
+
+
+
+Planning
+
+Dab & Char
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Storyline
+
+Dab & Char
+
+
+
+
+
+
+
+
+
+
+Thanks For Playing!
+
+
+
+
+PS. Renvo Co. is on your case."
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

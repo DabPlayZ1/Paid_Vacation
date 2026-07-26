@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://upuvwsfjulwp" path="res://keypad.glb" id="4_3pd4e"]
 [ext_resource type="Script" uid="uid://c5dy40o4pl8fe" path="res://keypad_body.gd" id="4_ogtir"]
 [ext_resource type="Script" uid="uid://cw1jwgww2ri3b" path="res://dialogue.gd" id="6_7mixf"]
+[ext_resource type="Script" uid="uid://cmwx7tg6py18d" path="res://keypad_body_2.gd" id="6_ggpod"]
 [ext_resource type="Script" uid="uid://8cefiomuyaa7" path="res://mirrah.gd" id="6_s8ikn"]
 [ext_resource type="Texture2D" uid="uid://5hrvhw4bd133" path="res://keypad_0.png" id="7_5qy72"]
 [ext_resource type="Texture2D" uid="uid://dw4yi0t3rgfsv" path="res://keypad_9.png" id="8_dqs25"]
@@ -28,14 +29,14 @@
 [ext_resource type="Texture2D" uid="uid://ckx8kw85mtvur" path="res://keypad_3_hover.png" id="24_nlr47"]
 [ext_resource type="Texture2D" uid="uid://cyjlc6sknnvso" path="res://keypad_1_hover.png" id="26_nlr47"]
 [ext_resource type="Texture2D" uid="uid://t8fnr4m7lkpd" path="res://keypad_enterer.png" id="27_nlr47"]
-[ext_resource type="Script" uid="uid://b8jtfiq0cnxw8" path="res://poster.gd" id="29_infwv"]
+[ext_resource type="Script" path="res://poster.gd" id="29_infwv"]
 [ext_resource type="Texture2D" uid="uid://ddfgl0jj8w3l7" path="res://Time_Poster.png" id="29_o5ys2"]
 [ext_resource type="Script" uid="uid://bvc4vn33hb2e5" path="res://temp_hammer.gd" id="30_dkt1i"]
 [ext_resource type="PackedScene" uid="uid://bik2x64p1yp81" path="res://hammer.glb" id="31_p8lip"]
 [ext_resource type="Script" uid="uid://drruwd42yx4wd" path="res://temp_vents.gd" id="32_3fuil"]
 [ext_resource type="Script" uid="uid://c36uwjjad4f6d" path="res://closedaid.gd" id="33_fhgrq"]
 [ext_resource type="Texture2D" uid="uid://c7fd7cejnxxa2" path="res://vent.jpg" id="34_822o5"]
-[ext_resource type="Script" path="res://openaidy.gd" id="34_qi6mx"]
+[ext_resource type="Script" uid="uid://bhg4ak8plit3f" path="res://openaidy.gd" id="34_qi6mx"]
 [ext_resource type="PackedScene" uid="uid://cmjwwon83efj1" path="res://clock.glb" id="35_jnvf1"]
 [ext_resource type="PackedScene" uid="uid://bcwx3lnklf67q" path="res://screwdriver.glb" id="36_ua0eg"]
 [ext_resource type="PackedScene" uid="uid://dsy5fs8r662ip" path="res://openaid.glb" id="37_6r86d"]
@@ -43,8 +44,16 @@
 [ext_resource type="PackedScene" uid="uid://b131o5egriqcb" path="res://closedaid.glb" id="38_22nfc"]
 [ext_resource type="PackedScene" uid="uid://bjco64l0b5s42" path="res://dot.glb" id="40_aogl0"]
 [ext_resource type="PackedScene" uid="uid://35h0gwcv5xeb" path="res://dash.glb" id="41_qi6mx"]
+[ext_resource type="Script" uid="uid://bkubobshax20f" path="res://temp_vents_2.gd" id="42_csmuh"]
 [ext_resource type="PackedScene" uid="uid://dydy8y2oknje8" path="res://plane3.glb" id="44_infwv"]
 [ext_resource type="PackedScene" uid="uid://cfq7aec1d6wy1" path="res://cockpit.glb" id="45_fyk5r"]
+[ext_resource type="Texture2D" uid="uid://btcaggfl2rktb" path="res://morsecode.png" id="46_c2xp8"]
+[ext_resource type="Script" uid="uid://rx1popgalibi" path="res://door.gd" id="47_6e22q"]
+[ext_resource type="Script" uid="uid://cfjs83vmqu088" path="res://handel.gd" id="47_vqep8"]
+[ext_resource type="Texture2D" uid="uid://bk1ipvyljxg2w" path="res://rules.png" id="48_iebl8"]
+[ext_resource type="Script" uid="uid://di4ixk42u06pa" path="res://cocdoor.gd" id="48_kb7em"]
+[ext_resource type="Texture2D" uid="uid://cd8muof0gmx3b" path="res://saksda.jpg" id="50_o318h"]
+[ext_resource type="Script" uid="uid://bd5m01dw2oi1" path="res://canvas_layer.gd" id="54_8a4wy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h71pn"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -155,6 +164,130 @@ size = Vector3(17.164429, 7.6204224, 5.881775)
 [sub_resource type="BoxShape3D" id="BoxShape3D_8a4wy"]
 size = Vector3(17.164429, 7.6204224, 5.881775)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_y5h2i"]
+size = Vector3(1.8520508, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1cyxo"]
+size = Vector3(32.35742, 1, 37.339355)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_71mwp"]
+size = Vector3(1, 7.5498047, 19.330566)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_01kbn"]
+size = Vector3(10.25769, 7.816162, 0.973114)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_54yt7"]
+size = Vector3(21.236664, 7.816162, 0.973114)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cwj6u"]
+size = Vector3(21.236664, 7.816162, 0.973114)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7d6qw"]
+size = Vector3(21.236664, 7.816162, 0.973114)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g6hr5"]
+size = Vector3(23.137535, 7.816162, 0.973114)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0p2k3"]
+size = Vector3(23.53703, 7.816162, 0.973114)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_td2hr"]
+size = Vector3(14.149231, 2.809082, 1.9038086)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_68ono"]
+size = Vector3(1.2591691, 2.00708, 1.3186035)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m8iuk"]
+size = Vector3(1.4079049, 2.00708, 1.3186035)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_humng"]
+size = Vector3(1.2767808, 2.00708, 1.3883057)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4j6j0"]
+size = Vector3(2.3236084, 6.5960693, 1.680603)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ghs62"]
+size = Vector3(2.3236084, 6.5960693, 1.680603)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r7w3o"]
+size = Vector3(4.830902, 7.685608, 1.680603)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r23r8"]
+size = Vector3(51.57821, 0.0708125, 35.111687)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lllkx"]
+size = Vector3(2.3236084, 6.5960693, 2.398407)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hgbse"]
+size = Vector3(2.3236084, 6.5960693, 2.398407)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vqep8"]
+albedo_texture = ExtResource("48_iebl8")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8a4wy"]
+material = SubResource("StandardMaterial3D_vqep8")
+size = Vector2(3, 4)
+orientation = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e41ew"]
+size = Vector3(5.193329, 19.74366, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tdlcl"]
+size = Vector3(10.667725, 18.276428, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r7w3o"]
+albedo_texture = ExtResource("50_o318h")
+albedo_texture_force_srgb = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_r23r8"]
+material = SubResource("StandardMaterial3D_r7w3o")
+size = Vector2(40, 20)
+orientation = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xxymk"]
+material = SubResource("StandardMaterial3D_r7w3o")
+size = Vector2(69, 20)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ggpod"]
+albedo_texture = ExtResource("46_c2xp8")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6e22q"]
+material = SubResource("StandardMaterial3D_ggpod")
+orientation = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8a4wy"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e41ew"]
+material = SubResource("StandardMaterial3D_8a4wy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1cyxo"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_71mwp"]
+material = SubResource("StandardMaterial3D_1cyxo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_01kbn"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_54yt7"]
+material = SubResource("StandardMaterial3D_01kbn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cwj6u"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7d6qw"]
+material = SubResource("StandardMaterial3D_cwj6u")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6hr5"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0p2k3"]
+material = SubResource("StandardMaterial3D_g6hr5")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xxymk"]
+
 [node name="Node3D" type="Node3D" unique_id=1256432373]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1533874501]
@@ -166,7 +299,7 @@ shadow_enabled = true
 
 [node name="Player" parent="." unique_id=741813192 instance=ExtResource("1_3dkdv")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.030533, 0.06437433, 2.3505058)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.03, 0.064, 2.351)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=64424704]
 
@@ -204,7 +337,7 @@ shape = SubResource("BoxShape3D_3pd4e")
 [node name="Bathroom2" parent="bathroom_body" unique_id=98115144 instance=ExtResource("2_h71pn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.283107, -0.3441116, 4.907204)
 
-[node name="Cube_001" parent="bathroom_body/Bathroom2" index="1" unique_id=1738970602]
+[node name="Cube_001" parent="bathroom_body/Bathroom2" index="1" unique_id=2085420990]
 transform = Transform3D(-1, -1.509958e-07, 0, 1.509958e-07, -1, 0, 0, 0, 1, 8, 9.000001, 0)
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1313865217]
@@ -233,6 +366,20 @@ shape = SubResource("BoxShape3D_5qy72")
 [node name="keypad" parent="keypad_body" unique_id=276040221 instance=ExtResource("4_3pd4e")]
 transform = Transform3D(-2.6226832e-09, 0, -0.06, 0, 0.06, 0, 0.06, 0, -2.6226832e-09, -1.485415, 0.59157157, -3.9294806)
 
+[node name="keypad_body2" type="StaticBody3D" parent="." unique_id=469851850]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -15.38984, 17.72672, 31.283262)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("6_ggpod")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="keypad_body2" unique_id=1151022495]
+transform = Transform3D(1.1924879e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, 1.1924879e-09, -1.4842241, 0.61050034, -3.7707825)
+shape = SubResource("BoxShape3D_5qy72")
+
+[node name="keypad" parent="keypad_body2" unique_id=1684669162 instance=ExtResource("4_3pd4e")]
+transform = Transform3D(-2.6226832e-09, 0, -0.06, 0, 0.06, 0, 0.06, 0, -2.6226832e-09, -1.485415, 0.59157157, -3.9294806)
+
 [node name="mirrah" type="StaticBody3D" parent="." unique_id=1105766770]
 unique_name_in_owner = true
 collision_layer = 2
@@ -257,10 +404,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -42.5
+offset_top = 18.0
+offset_right = 42.5
+offset_bottom = 41.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -311,9 +458,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -332.5
-offset_top = -20.0
+offset_top = 28.0
 offset_right = 332.5
-offset_bottom = 20.0
+offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Press E to Continue"
@@ -461,6 +608,288 @@ theme_override_font_sizes/normal_font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Keypad2" type="CanvasLayer" parent="." unique_id=258331678]
+unique_name_in_owner = true
+visible = false
+
+[node name="Esc" type="RichTextLabel" parent="Keypad2" unique_id=228101827]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -273.0
+offset_top = 162.0
+offset_right = 323.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Press Escape to Enter Code"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="0_plane" type="TextureButton" parent="Keypad2" unique_id=668943477]
+offset_left = 570.0
+offset_top = 430.0
+offset_right = 610.0
+offset_bottom = 470.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("7_5qy72")
+texture_pressed = ExtResource("7_5qy72")
+texture_hover = ExtResource("17_6lp50")
+
+[node name="9_plane" type="TextureButton" parent="Keypad2" unique_id=701652864]
+offset_left = 632.0
+offset_top = 368.0
+offset_right = 1712.0
+offset_bottom = 1448.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("8_dqs25")
+texture_pressed = ExtResource("8_dqs25")
+texture_hover = ExtResource("16_ndy6q")
+
+[node name="8_plane" type="TextureButton" parent="Keypad2" unique_id=259886127]
+offset_left = 570.0
+offset_top = 368.0
+offset_right = 1650.0
+offset_bottom = 1448.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("9_6lp50")
+texture_pressed = ExtResource("9_6lp50")
+texture_hover = ExtResource("18_w73cp")
+
+[node name="7_plane" type="TextureButton" parent="Keypad2" unique_id=841086649]
+offset_left = 508.0
+offset_top = 368.0
+offset_right = 1588.0
+offset_bottom = 1448.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("10_p2dcp")
+texture_pressed = ExtResource("10_p2dcp")
+texture_hover = ExtResource("20_uh68g")
+
+[node name="6_plane" type="TextureButton" parent="Keypad2" unique_id=1741323765]
+offset_left = 632.0
+offset_top = 306.0
+offset_right = 1712.0
+offset_bottom = 1386.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("11_scmn0")
+texture_pressed = ExtResource("11_scmn0")
+texture_hover = ExtResource("19_lt85m")
+
+[node name="5_plane" type="TextureButton" parent="Keypad2" unique_id=433673881]
+offset_left = 570.0
+offset_top = 306.0
+offset_right = 1650.0
+offset_bottom = 1386.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("12_ndy6q")
+texture_pressed = ExtResource("12_ndy6q")
+texture_hover = ExtResource("21_3aeif")
+
+[node name="4_plane" type="TextureButton" parent="Keypad2" unique_id=2017907461]
+offset_left = 508.0
+offset_top = 306.0
+offset_right = 1588.0
+offset_bottom = 1386.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("13_w73cp")
+texture_pressed = ExtResource("13_w73cp")
+texture_hover = ExtResource("23_5xfyk")
+
+[node name="3_plane" type="TextureButton" parent="Keypad2" unique_id=1260097503]
+offset_left = 632.0
+offset_top = 244.0
+offset_right = 1712.0
+offset_bottom = 1324.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("14_uh68g")
+texture_pressed = ExtResource("14_uh68g")
+texture_hover = ExtResource("24_nlr47")
+
+[node name="2_plane" type="TextureButton" parent="Keypad2" unique_id=1634697445]
+offset_left = 570.0
+offset_top = 244.0
+offset_right = 1650.0
+offset_bottom = 1324.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("15_106e5")
+texture_pressed = ExtResource("15_106e5")
+texture_hover = ExtResource("24_5xfyk")
+
+[node name="1_plane" type="TextureButton" parent="Keypad2" unique_id=180272556]
+offset_left = 508.0
+offset_top = 244.0
+offset_right = 1588.0
+offset_bottom = 1324.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("16_lt85m")
+texture_pressed = ExtResource("16_lt85m")
+texture_hover = ExtResource("26_nlr47")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keypad2" unique_id=721649285]
+position = Vector2(598, 194)
+scale = Vector2(1.0805688, 0.185)
+texture = ExtResource("27_nlr47")
+
+[node name="Code_plane" type="RichTextLabel" parent="Keypad2" unique_id=1368602354]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -206.0
+offset_top = 155.0
+offset_right = 250.0
+offset_bottom = 233.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keypad3" type="CanvasLayer" parent="." unique_id=1418593716]
+unique_name_in_owner = true
+visible = false
+
+[node name="Esc" type="RichTextLabel" parent="Keypad3" unique_id=235201216]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -273.0
+offset_top = 162.0
+offset_right = 323.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Press Escape to Enter Code"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="0_pit" type="TextureButton" parent="Keypad3" unique_id=1522726007]
+offset_left = 570.0
+offset_top = 430.0
+offset_right = 610.0
+offset_bottom = 470.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("7_5qy72")
+texture_pressed = ExtResource("7_5qy72")
+texture_hover = ExtResource("17_6lp50")
+
+[node name="9_pit" type="TextureButton" parent="Keypad3" unique_id=1191041061]
+offset_left = 632.0
+offset_top = 368.0
+offset_right = 1712.0
+offset_bottom = 1448.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("8_dqs25")
+texture_pressed = ExtResource("8_dqs25")
+texture_hover = ExtResource("16_ndy6q")
+
+[node name="8_pit" type="TextureButton" parent="Keypad3" unique_id=1326116340]
+offset_left = 570.0
+offset_top = 368.0
+offset_right = 1650.0
+offset_bottom = 1448.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("9_6lp50")
+texture_pressed = ExtResource("9_6lp50")
+texture_hover = ExtResource("18_w73cp")
+
+[node name="7_pit" type="TextureButton" parent="Keypad3" unique_id=1387795332]
+offset_left = 508.0
+offset_top = 368.0
+offset_right = 1588.0
+offset_bottom = 1448.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("10_p2dcp")
+texture_pressed = ExtResource("10_p2dcp")
+texture_hover = ExtResource("20_uh68g")
+
+[node name="6_pit" type="TextureButton" parent="Keypad3" unique_id=843751068]
+offset_left = 632.0
+offset_top = 306.0
+offset_right = 1712.0
+offset_bottom = 1386.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("11_scmn0")
+texture_pressed = ExtResource("11_scmn0")
+texture_hover = ExtResource("19_lt85m")
+
+[node name="5_pit" type="TextureButton" parent="Keypad3" unique_id=1203147493]
+offset_left = 570.0
+offset_top = 306.0
+offset_right = 1650.0
+offset_bottom = 1386.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("12_ndy6q")
+texture_pressed = ExtResource("12_ndy6q")
+texture_hover = ExtResource("21_3aeif")
+
+[node name="4_pit" type="TextureButton" parent="Keypad3" unique_id=1028969821]
+offset_left = 508.0
+offset_top = 306.0
+offset_right = 1588.0
+offset_bottom = 1386.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("13_w73cp")
+texture_pressed = ExtResource("13_w73cp")
+texture_hover = ExtResource("23_5xfyk")
+
+[node name="3_pit" type="TextureButton" parent="Keypad3" unique_id=1800834988]
+offset_left = 632.0
+offset_top = 244.0
+offset_right = 1712.0
+offset_bottom = 1324.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("14_uh68g")
+texture_pressed = ExtResource("14_uh68g")
+texture_hover = ExtResource("24_nlr47")
+
+[node name="2_pit" type="TextureButton" parent="Keypad3" unique_id=1476257318]
+offset_left = 570.0
+offset_top = 244.0
+offset_right = 1650.0
+offset_bottom = 1324.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("15_106e5")
+texture_pressed = ExtResource("15_106e5")
+texture_hover = ExtResource("24_5xfyk")
+
+[node name="1_pit" type="TextureButton" parent="Keypad3" unique_id=1469364165]
+offset_left = 508.0
+offset_top = 244.0
+offset_right = 1588.0
+offset_bottom = 1324.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("16_lt85m")
+texture_pressed = ExtResource("16_lt85m")
+texture_hover = ExtResource("26_nlr47")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keypad3" unique_id=809817979]
+position = Vector2(598, 194)
+scale = Vector2(1.0805688, 0.185)
+texture = ExtResource("27_nlr47")
+
+[node name="Code_pit" type="RichTextLabel" parent="Keypad3" unique_id=944920487]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -206.0
+offset_top = 155.0
+offset_right = 250.0
+offset_bottom = 233.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Poster" type="StaticBody3D" parent="." unique_id=1658553342]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30720752, 2.411474, -2.9079914)
 script = ExtResource("29_infwv")
@@ -473,6 +902,18 @@ surface_material_override/0 = SubResource("StandardMaterial3D_b4wvp")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Poster" unique_id=1875098271]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.313694, -0.0053100586, 0)
 shape = SubResource("BoxShape3D_qi6mx")
+
+[node name="hammer2" parent="." unique_id=1879574033 instance=ExtResource("31_p8lip")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -12.088528, 16.502142, 13.361781)
+
+[node name="hammer3" parent="." unique_id=1274589088 instance=ExtResource("31_p8lip")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -14.462673, 17.46351, 17.21944)
+
+[node name="hammer4" parent="." unique_id=977297827 instance=ExtResource("31_p8lip")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -15.072622, 16.54081, -3.6079712)
+
+[node name="hammer5" parent="." unique_id=1750041473 instance=ExtResource("31_p8lip")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -6.331817, 17.28745, 1.6150289)
 
 [node name="temp_hammer" type="StaticBody3D" parent="." unique_id=160357930]
 unique_name_in_owner = true
@@ -555,11 +996,28 @@ mesh = SubResource("BoxMesh_p8lip")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="temp_vents" unique_id=1805200830]
 shape = SubResource("BoxShape3D_822o5")
 
+[node name="screwdriver2" parent="." unique_id=1614611811 instance=ExtResource("36_ua0eg")]
+unique_name_in_owner = true
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -14.751541, 16.571936, 2.2640643)
+
+[node name="screwdriver3" parent="." unique_id=979817025 instance=ExtResource("36_ua0eg")]
+unique_name_in_owner = true
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -12.102905, 16.571936, 9.079243)
+
+[node name="screwdriver4" parent="." unique_id=121004559 instance=ExtResource("36_ua0eg")]
+unique_name_in_owner = true
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -17.672283, 17.097178, 9.079243)
+
+[node name="screwdriver5" parent="." unique_id=526456809 instance=ExtResource("36_ua0eg")]
+unique_name_in_owner = true
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -6.050011, 16.530052, 6.1818557)
+
 [node name="temp_vents2" type="StaticBody3D" parent="." unique_id=1442800670]
 unique_name_in_owner = true
 transform = Transform3D(0.18847579, 0, 0, 0, 2.462363, 0, 0, 0, 3.1153002, -21.243729, 17.58408, -8.657139)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("42_csmuh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="temp_vents2" unique_id=442871022]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.07231063, 0)
@@ -572,10 +1030,64 @@ shape = SubResource("BoxShape3D_822o5")
 transform = Transform3D(0.143, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -9.195931, 3.7789779, -2.8925843)
 
 [node name="dot" parent="." unique_id=542758518 instance=ExtResource("40_aogl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.49764, 1.5, 14.333315)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -6.106173, 21.230839, -7.836803)
+
+[node name="dot11" parent="." unique_id=702985765 instance=ExtResource("40_aogl0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -20.466738, 21.230839, -4.926301)
+
+[node name="dot8" parent="." unique_id=1416493423 instance=ExtResource("40_aogl0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -20.460886, 21.230839, 19.39293)
+
+[node name="dot9" parent="." unique_id=1065466175 instance=ExtResource("40_aogl0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -20.460886, 21.230839, 16.185299)
+
+[node name="dot10" parent="." unique_id=1442893207 instance=ExtResource("40_aogl0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -20.460886, 21.230839, 15.102741)
+
+[node name="dot2" parent="." unique_id=1949533575 instance=ExtResource("40_aogl0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -6.106173, 21.230839, -4.7215295)
+
+[node name="dot3" parent="." unique_id=1629696968 instance=ExtResource("40_aogl0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -6.106173, 21.230839, -3.73328)
+
+[node name="dot4" parent="." unique_id=1868179895 instance=ExtResource("40_aogl0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -6.106173, 21.230839, -0.6104348)
+
+[node name="dot5" parent="." unique_id=168317080 instance=ExtResource("40_aogl0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -6.106173, 21.230839, 12.444097)
+
+[node name="dot6" parent="." unique_id=1291029048 instance=ExtResource("40_aogl0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -6.106173, 21.230839, 15.32343)
+
+[node name="dot7" parent="." unique_id=1963831421 instance=ExtResource("40_aogl0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -6.106173, 21.230839, 16.58817)
 
 [node name="dash" parent="." unique_id=685350801 instance=ExtResource("41_qi6mx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.70617, 1.4999981, 20.814846)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -6.039, 21.23, 0.48764133)
+
+[node name="dash2" parent="." unique_id=1104146016 instance=ExtResource("41_qi6mx")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -6.039, 21.23, 8.6456995)
+
+[node name="dash3" parent="." unique_id=532856885 instance=ExtResource("41_qi6mx")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -6.039, 21.23, 11.035)
+
+[node name="dash4" parent="." unique_id=647103778 instance=ExtResource("41_qi6mx")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -20.501808, 21.23, 12.577984)
+
+[node name="dash5" parent="." unique_id=876102307 instance=ExtResource("41_qi6mx")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -20.501808, 21.23, 11.002459)
+
+[node name="dash6" parent="." unique_id=341819984 instance=ExtResource("41_qi6mx")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -20.501808, 21.23, 2.8799877)
+
+[node name="dash7" parent="." unique_id=1621064056 instance=ExtResource("41_qi6mx")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -20.501808, 21.23, 0.66696024)
+
+[node name="dash8" parent="." unique_id=1392282745 instance=ExtResource("41_qi6mx")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -20.501808, 21.23, -1.0688243)
+
+[node name="dash9" parent="." unique_id=1580236495 instance=ExtResource("41_qi6mx")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -20.501808, 21.23, -3.3742318)
 
 [node name="TimePoster" type="Sprite2D" parent="." unique_id=101410930]
 unique_name_in_owner = true
@@ -686,8 +1198,252 @@ shape = SubResource("BoxShape3D_vqep8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.334042, 44.902454, 42.034363)
 shape = SubResource("BoxShape3D_8a4wy")
 
-[node name="cockpit" parent="plane" unique_id=1254953528 instance=ExtResource("45_fyk5r")]
+[node name="Handel" type="StaticBody3D" parent="plane" unique_id=955051708]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 83.03596, 52.485584, 57.37156)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("47_vqep8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="plane/Handel" unique_id=1542702609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4363823, -1.3612423, 0.07558441)
+shape = SubResource("BoxShape3D_y5h2i")
+debug_color = Color(0.7137255, 1, 0, 0.41960785)
+
+[node name="cocisc" type="StaticBody3D" parent="plane" unique_id=1779497417]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 51.24529, 50.9945, 79.25544)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="plane/cocisc" unique_id=727135063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0709, -3.421196, 3.2907734)
+shape = SubResource("BoxShape3D_1cyxo")
+
+[node name="cockpit" parent="plane/cocisc" unique_id=1254953528 instance=ExtResource("45_fyk5r")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="plane/cocisc" unique_id=1613041646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28582573, -0.19384766, 2.6022968)
+shape = SubResource("BoxShape3D_71mwp")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="plane/cocisc" unique_id=2057322453]
+transform = Transform3D(0.8660253, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, 0.8660253, 4.3232536, 0.10542488, -8.519108)
+shape = SubResource("BoxShape3D_01kbn")
+debug_color = Color(0.98039216, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="plane/cocisc" unique_id=1598053304]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 9.81274, 0.10542488, -10.262348)
+shape = SubResource("BoxShape3D_54yt7")
+debug_color = Color(0.98039216, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="plane/cocisc" unique_id=1131450470]
+transform = Transform3D(-0.8660253, 0, 0.5, 0, 1, 0, -0.5, 0, -0.8660253, 25.131271, 0.10542488, -6.8136597)
+shape = SubResource("BoxShape3D_cwj6u")
+debug_color = Color(0.98039216, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="plane/cocisc" unique_id=1535357759]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 25.52045, 0.10542488, 2.3845844)
+shape = SubResource("BoxShape3D_7d6qw")
+debug_color = Color(0.98039216, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="plane/cocisc" unique_id=931991585]
+transform = Transform3D(-0.8660253, 0, -0.5, 0, 1, 0, 0.5, 0, -0.8660253, 24.69735, 0.10542488, 12.590403)
+shape = SubResource("BoxShape3D_g6hr5")
+debug_color = Color(0.98039216, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="plane/cocisc" unique_id=365186706]
+transform = Transform3D(-0.8660253, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, -0.8660253, 0.78429794, 0.10542488, 12.569574)
+shape = SubResource("BoxShape3D_0p2k3")
+debug_color = Color(0.98039216, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="plane/cocisc" unique_id=805207539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.962936, -1.6737671, -8.316189)
+shape = SubResource("BoxShape3D_td2hr")
+debug_color = Color(0.99215686, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="plane/cocisc" unique_id=2051996530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.028952, -2.074768, -6.0043087)
+shape = SubResource("BoxShape3D_68ono")
+debug_color = Color(0.99215686, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="plane/cocisc" unique_id=530926653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.987381, -2.074768, -6.0043087)
+shape = SubResource("BoxShape3D_m8iuk")
+debug_color = Color(0.99215686, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="plane/cocisc" unique_id=1264822970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.015594, -2.074768, -5.9694576)
+shape = SubResource("BoxShape3D_humng")
+debug_color = Color(0.99215686, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="plane/cocisc" unique_id=2114122187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.677048, -0.8689575, 0.027896881)
+shape = SubResource("BoxShape3D_4j6j0")
+debug_color = Color(0.93333334, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D14" type="CollisionShape3D" parent="plane/cocisc" unique_id=537808290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.677048, -0.8689575, 11.052862)
+shape = SubResource("BoxShape3D_ghs62")
+debug_color = Color(0.93333334, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D17" type="CollisionShape3D" parent="plane/cocisc" unique_id=919181064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.456646, -0.32418823, 19.134829)
+shape = SubResource("BoxShape3D_r7w3o")
+debug_color = Color(0.93333334, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="plane/cocisc" unique_id=957358660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.033836, 2.9698467, 5.667822)
+shape = SubResource("BoxShape3D_r23r8")
+debug_color = Color(0.93333334, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D15" type="CollisionShape3D" parent="plane/cocisc" unique_id=1390598548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8767681, -0.8689575, 11.08526)
+shape = SubResource("BoxShape3D_lllkx")
+debug_color = Color(0.93333334, 0, 0, 0.41960785)
+
+[node name="CollisionShape3D16" type="CollisionShape3D" parent="plane/cocisc" unique_id=1009264028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8767681, -0.8689575, 0.10256004)
+shape = SubResource("BoxShape3D_hgbse")
+debug_color = Color(0.93333334, 0, 0, 0.41960785)
+
+[node name="ruless" type="StaticBody3D" parent="plane" unique_id=354383907]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 51.24529, 50.9945, 79.25544)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="plane/ruless" unique_id=1189001598]
+transform = Transform3D(0.51264244, 0, 0.8586023, 0, 1, 0, -0.8586023, 0, 0.51264244, 7.245819, 0, 15.92613)
+mesh = SubResource("PlaneMesh_8a4wy")
+
+[node name="door" type="StaticBody3D" parent="plane" unique_id=1330167630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.343464, 45.934013, 87.713615)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("47_6e22q")
+
+[node name="doorcollision" type="CollisionShape3D" parent="plane/door" unique_id=704572835]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51493454, -4.913334, 0.044708252)
+shape = SubResource("BoxShape3D_e41ew")
+disabled = true
+
+[node name="cocdoor" type="StaticBody3D" parent="plane" unique_id=501224077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.6633, 44.405807, 124.97438)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("48_kb7em")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="plane/cocdoor" unique_id=487230146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8792648, 6.0052795, 0)
+shape = SubResource("BoxShape3D_tdlcl")
+
+[node name="skyah" type="StaticBody3D" parent="plane" unique_id=513598481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.83083, 51.162834, 55.24879)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="plane/skyah" unique_id=75418291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.46268845)
+mesh = SubResource("PlaneMesh_r23r8")
+
+[node name="skyah2" type="StaticBody3D" parent="plane" unique_id=1356113378]
+transform = Transform3D(0.6928203, 0, 0.40000004, 0, 0.8000001, 0, -0.40000004, 0, 0.6928203, 58.169422, 51.162834, 62.574608)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="plane/skyah2" unique_id=420382052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2684402, 0, -1.8590012)
+mesh = SubResource("PlaneMesh_r23r8")
+
+[node name="skyah3" type="StaticBody3D" parent="plane" unique_id=1169979459]
+transform = Transform3D(-0.6928203, -3.4969116e-08, -0.40000007, 0, -0.8000001, 6.9938224e-08, -0.40000007, 6.056828e-08, 0.6928203, 105.89996, 51.162834, 60.615864)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="plane/skyah3" unique_id=1306803791]
+transform = Transform3D(-1, 8.7422784e-08, 0, -8.742278e-08, -1.0000001, 0, 0, 0, 1, -2.2684479, 0.8870926, -1.8590088)
+mesh = SubResource("PlaneMesh_r23r8")
+
+[node name="skyah4" type="StaticBody3D" parent="plane" unique_id=980349272]
+transform = Transform3D(-3.4969112e-08, 0, 0.8000001, 0, 0.8000001, 0, -0.8000001, 0, -3.4969112e-08, 53.33338, 51.162834, 81.6489)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="plane/skyah4" unique_id=1825670740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2684402, 0, -1.8590012)
+mesh = SubResource("PlaneMesh_xxymk")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="plane/skyah4" unique_id=1515437595]
+transform = Transform3D(-0.99999964, 0, -8.7422755e-08, 0, 0.99999964, 0, 8.7422755e-08, 0, -0.99999964, -2.2684631, 0, 77.50381)
+mesh = SubResource("PlaneMesh_xxymk")
+
+[node name="morsepng" type="StaticBody3D" parent="." unique_id=1490408801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.136517, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="morsepng" unique_id=624491412]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.2991424, 5.8399906, -8.961953)
+mesh = SubResource("PlaneMesh_6e22q")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=45698868]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.959461, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=2067064860]
+transform = Transform3D(0.57697916, 0, 0, 0, 23.225056, 0, 0, 0, 3.685665, 0, 0, 0)
+mesh = SubResource("BoxMesh_e41ew")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="StaticBody3D2" unique_id=504959124]
+transform = Transform3D(15.803269, 0, 0, 0, 1.8469437, 0, 0, 0, 4.1946216, 0, 0, 0)
+mesh = SubResource("BoxMesh_e41ew")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D2" unique_id=1386722108]
+transform = Transform3D(0.57697916, 0, 0, 0, 23.225056, 0, 0, 0, 3.685665, 6.912184, 0, 0)
+mesh = SubResource("BoxMesh_71mwp")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="StaticBody3D2" unique_id=712988372]
+transform = Transform3D(12.708912, 0, 0, 0, 3.6793873, 0, 0, 0, 3.685665, 6.912184, 11.330163, 0)
+mesh = SubResource("BoxMesh_54yt7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D2" unique_id=1129168159]
+transform = Transform3D(-2.5220558e-08, 0, 9.466202, 0, 23.225056, 0, -0.5769791, 0, -4.137808e-07, 5.0803604, 0.78225803, 1.946367)
+mesh = SubResource("BoxMesh_7d6qw")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody3D2" unique_id=948676967]
+transform = Transform3D(-2.5220558e-08, 0, 9.466202, 0, 23.225056, 0, -0.5769791, 0, -4.137808e-07, 5.0803604, 0.78225803, -1.594024)
+mesh = SubResource("BoxMesh_0p2k3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=2061308401]
+shape = SubResource("BoxShape3D_xxymk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1994492731]
+script = ExtResource("54_8a4wy")
+
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=789039149]
+unique_name_in_owner = true
+process_mode = 3
+wait_time = 1200.0
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1471193929]
+unique_name_in_owner = true
+offset_left = 8.0
+offset_right = 334.95654
+offset_bottom = 188.0
+theme_override_font_sizes/font_size = 30
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1449143906]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=1645723272]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "The Plane Crashed.
+
+You Died
+
+Press R to Play Again"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Keypad/0" to="keypad_body" method="_on_0_pressed"]
 [connection signal="pressed" from="Keypad/9" to="keypad_body" method="_on_9_pressed"]
@@ -699,5 +1455,26 @@ transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 51.24529, 50.9945, 79.2
 [connection signal="pressed" from="Keypad/3" to="keypad_body" method="_on_3_pressed"]
 [connection signal="pressed" from="Keypad/2" to="keypad_body" method="_on_2_pressed"]
 [connection signal="pressed" from="Keypad/1" to="keypad_body" method="_on_1_pressed"]
+[connection signal="pressed" from="Keypad2/0_plane" to="keypad_body2" method="_on_0_plane_pressed"]
+[connection signal="pressed" from="Keypad2/9_plane" to="keypad_body2" method="_on_9_plane_pressed"]
+[connection signal="pressed" from="Keypad2/8_plane" to="keypad_body2" method="_on_8_plane_pressed"]
+[connection signal="pressed" from="Keypad2/7_plane" to="keypad_body2" method="_on_7_plane_pressed"]
+[connection signal="pressed" from="Keypad2/6_plane" to="keypad_body2" method="_on_6_plane_pressed"]
+[connection signal="pressed" from="Keypad2/5_plane" to="keypad_body2" method="_on_5_plane_pressed"]
+[connection signal="pressed" from="Keypad2/4_plane" to="keypad_body2" method="_on_4_plane_pressed"]
+[connection signal="pressed" from="Keypad2/3_plane" to="keypad_body2" method="_on_3_plane_pressed"]
+[connection signal="pressed" from="Keypad2/2_plane" to="keypad_body2" method="_on_2_plane_pressed"]
+[connection signal="pressed" from="Keypad2/1_plane" to="keypad_body2" method="_on_1_plane_pressed"]
+[connection signal="pressed" from="Keypad3/0_pit" to="plane/Handel" method="_on_0_pit_pressed"]
+[connection signal="pressed" from="Keypad3/9_pit" to="plane/Handel" method="_on_9_pit_pressed"]
+[connection signal="pressed" from="Keypad3/8_pit" to="plane/Handel" method="_on_8_pit_pressed"]
+[connection signal="pressed" from="Keypad3/7_pit" to="plane/Handel" method="_on_7_pit_pressed"]
+[connection signal="pressed" from="Keypad3/6_pit" to="plane/Handel" method="_on_6_pit_pressed"]
+[connection signal="pressed" from="Keypad3/5_pit" to="plane/Handel" method="_on_5_pit_pressed"]
+[connection signal="pressed" from="Keypad3/4_pit" to="plane/Handel" method="_on_4_pit_pressed"]
+[connection signal="pressed" from="Keypad3/3_pit" to="plane/Handel" method="_on_3_pit_pressed"]
+[connection signal="pressed" from="Keypad3/2_pit" to="plane/Handel" method="_on_2_pit_pressed"]
+[connection signal="pressed" from="Keypad3/1_pit" to="plane/Handel" method="_on_1_pit_pressed"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_clock_timer_timeout"]
 
 [editable path="bathroom_body/Bathroom2"]

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btcaggfl2rktb"
-path.s3tc="res://.godot/imported/morsecode.png-32eeaafc56fca594d6e970b2463b8c42.s3tc.ctex"
+uid="uid://cd8muof0gmx3b"
+path.s3tc="res://.godot/imported/saksda.jpg-f0ec802b23dbc5426de656513b8124b7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://morsecode.png"
-dest_files=["res://.godot/imported/morsecode.png-32eeaafc56fca594d6e970b2463b8c42.s3tc.ctex"]
+source_file="res://saksda.jpg"
+dest_files=["res://.godot/imported/saksda.jpg-f0ec802b23dbc5426de656513b8124b7.s3tc.ctex"]
 
 [params]
 

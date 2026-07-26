@@ -28,6 +28,7 @@ transform = Transform3D(5, 0, 0, 0, -1.5298986e-07, -5, 0, 3.5, -2.1855695e-07, 
 collision_mask = 2
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=330612634]
+unique_name_in_owner = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

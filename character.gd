@@ -19,6 +19,9 @@ var dashtimer : float = 0.0
 @export var can_move = true
 # Camera Movement
 
+func hidecross():
+	%TextureRect.hide()
+
 func _ready() -> void:
 	print("Captured!")
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
