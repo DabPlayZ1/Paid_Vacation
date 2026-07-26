@@ -9,9 +9,11 @@ func Interact():
 	if can_interact == false:
 		return
 	%Keypad.show()
+	%Close.show()
 	%Player.can_move = false
 	%"E interact".hide()
-			
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	%Player.captured = false
 func check_code():
 	print(code)
 	if code.length() == 4:
@@ -22,6 +24,9 @@ func check_code():
 			%Code.text = "Correct!"
 			await get_tree().create_timer(1.0).timeout
 			%Keypad.hide()
+			%Close.hide()
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			%Player.captured = true
 			%Player.can_move = true
 			correct = true
 			queue_free()
@@ -39,6 +44,9 @@ func check_code():
 			%Code.modulate = Color.WHITE
 			print("Wrong")
 			%Keypad.hide()
+			%Close.hide()
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			%Player.captured = true
 			%Player.can_move = true
 			can_interact = true
 		code = ""
@@ -101,3 +109,8 @@ func _on_1_pressed() -> void:
 		code+="1"
 		check_code()
 		%Code.text = code
+
+
+func _on_keypad_visibility_changed() -> void:
+	code = ""
+	%Code.text = code

@@ -29,14 +29,14 @@
 [ext_resource type="Texture2D" uid="uid://ckx8kw85mtvur" path="res://keypad_3_hover.png" id="24_nlr47"]
 [ext_resource type="Texture2D" uid="uid://cyjlc6sknnvso" path="res://keypad_1_hover.png" id="26_nlr47"]
 [ext_resource type="Texture2D" uid="uid://t8fnr4m7lkpd" path="res://keypad_enterer.png" id="27_nlr47"]
-[ext_resource type="Script" path="res://poster.gd" id="29_infwv"]
+[ext_resource type="Script" uid="uid://b8jtfiq0cnxw8" path="res://poster.gd" id="29_infwv"]
 [ext_resource type="Texture2D" uid="uid://ddfgl0jj8w3l7" path="res://Time_Poster.png" id="29_o5ys2"]
 [ext_resource type="Script" uid="uid://bvc4vn33hb2e5" path="res://temp_hammer.gd" id="30_dkt1i"]
 [ext_resource type="PackedScene" uid="uid://bik2x64p1yp81" path="res://hammer.glb" id="31_p8lip"]
 [ext_resource type="Script" uid="uid://drruwd42yx4wd" path="res://temp_vents.gd" id="32_3fuil"]
 [ext_resource type="Script" uid="uid://c36uwjjad4f6d" path="res://closedaid.gd" id="33_fhgrq"]
 [ext_resource type="Texture2D" uid="uid://c7fd7cejnxxa2" path="res://vent.jpg" id="34_822o5"]
-[ext_resource type="Script" uid="uid://bhg4ak8plit3f" path="res://openaidy.gd" id="34_qi6mx"]
+[ext_resource type="Script" path="res://openaidy.gd" id="34_qi6mx"]
 [ext_resource type="PackedScene" uid="uid://cmjwwon83efj1" path="res://clock.glb" id="35_jnvf1"]
 [ext_resource type="PackedScene" uid="uid://bcwx3lnklf67q" path="res://screwdriver.glb" id="36_ua0eg"]
 [ext_resource type="PackedScene" uid="uid://dsy5fs8r662ip" path="res://openaid.glb" id="37_6r86d"]
@@ -54,6 +54,8 @@
 [ext_resource type="Script" uid="uid://di4ixk42u06pa" path="res://cocdoor.gd" id="48_kb7em"]
 [ext_resource type="Texture2D" uid="uid://cd8muof0gmx3b" path="res://saksda.jpg" id="50_o318h"]
 [ext_resource type="Script" uid="uid://bd5m01dw2oi1" path="res://canvas_layer.gd" id="54_8a4wy"]
+[ext_resource type="PackedScene" uid="uid://e6238nfutsft" path="res://midlight.glb" id="55_e41ew"]
+[ext_resource type="Script" uid="uid://sy6moqllru2t" path="res://close.gd" id="56_1cyxo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h71pn"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -337,7 +339,7 @@ shape = SubResource("BoxShape3D_3pd4e")
 [node name="Bathroom2" parent="bathroom_body" unique_id=98115144 instance=ExtResource("2_h71pn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.283107, -0.3441116, 4.907204)
 
-[node name="Cube_001" parent="bathroom_body/Bathroom2" index="1" unique_id=2085420990]
+[node name="Cube_001" parent="bathroom_body/Bathroom2" index="1" unique_id=1738970602]
 transform = Transform3D(-1, -1.509958e-07, 0, 1.509958e-07, -1, 0, 0, 0, 1, 8, 9.000001, 0)
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1313865217]
@@ -471,24 +473,6 @@ vertical_alignment = 1
 unique_name_in_owner = true
 visible = false
 
-[node name="Esc" type="RichTextLabel" parent="Keypad" unique_id=513628202]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -273.0
-offset_top = 162.0
-offset_right = 323.0
-offset_bottom = 189.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Press Escape to Enter Code"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="0" type="TextureButton" parent="Keypad" unique_id=1473422943]
 offset_left = 570.0
 offset_top = 430.0
@@ -612,24 +596,6 @@ vertical_alignment = 1
 unique_name_in_owner = true
 visible = false
 
-[node name="Esc" type="RichTextLabel" parent="Keypad2" unique_id=228101827]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -273.0
-offset_top = 162.0
-offset_right = 323.0
-offset_bottom = 189.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Press Escape to Enter Code"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="0_plane" type="TextureButton" parent="Keypad2" unique_id=668943477]
 offset_left = 570.0
 offset_top = 430.0
@@ -752,24 +718,6 @@ vertical_alignment = 1
 [node name="Keypad3" type="CanvasLayer" parent="." unique_id=1418593716]
 unique_name_in_owner = true
 visible = false
-
-[node name="Esc" type="RichTextLabel" parent="Keypad3" unique_id=235201216]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -273.0
-offset_top = 162.0
-offset_right = 323.0
-offset_bottom = 189.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Press Escape to Enter Code"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="0_pit" type="TextureButton" parent="Keypad3" unique_id=1522726007]
 offset_left = 570.0
@@ -906,9 +854,6 @@ shape = SubResource("BoxShape3D_qi6mx")
 [node name="hammer2" parent="." unique_id=1879574033 instance=ExtResource("31_p8lip")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -12.088528, 16.502142, 13.361781)
 
-[node name="hammer3" parent="." unique_id=1274589088 instance=ExtResource("31_p8lip")]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -14.462673, 17.46351, 17.21944)
-
 [node name="hammer4" parent="." unique_id=977297827 instance=ExtResource("31_p8lip")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -15.072622, 16.54081, -3.6079712)
 
@@ -995,10 +940,6 @@ mesh = SubResource("BoxMesh_p8lip")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="temp_vents" unique_id=1805200830]
 shape = SubResource("BoxShape3D_822o5")
-
-[node name="screwdriver2" parent="." unique_id=1614611811 instance=ExtResource("36_ua0eg")]
-unique_name_in_owner = true
-transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -14.751541, 16.571936, 2.2640643)
 
 [node name="screwdriver3" parent="." unique_id=979817025 instance=ExtResource("36_ua0eg")]
 unique_name_in_owner = true
@@ -1401,13 +1342,12 @@ mesh = SubResource("BoxMesh_0p2k3")
 shape = SubResource("BoxShape3D_xxymk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1994492731]
-visible = false
 script = ExtResource("54_8a4wy")
 
 [node name="Timer" type="Timer" parent="CanvasLayer" unique_id=789039149]
 unique_name_in_owner = true
 process_mode = 3
-wait_time = 1200.0
+wait_time = 1500.0
 one_shot = true
 autostart = true
 
@@ -1446,6 +1386,24 @@ Press R to Play Again"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="midlight" parent="." unique_id=1799955781 instance=ExtResource("55_e41ew")]
+transform = Transform3D(-4.371139e-09, 0, 0.07, 0, 0.1, 0, -0.1, 0, -3.059797e-09, -15.5, 16.640709, 2.264)
+
+[node name="midlight2" parent="." unique_id=2086459856 instance=ExtResource("55_e41ew")]
+transform = Transform3D(0.1, 0, 0, 0, 0.099281795, 0.008374404, 0, -0.011963434, 0.069497265, -14.463, 17.520859, 16.5)
+
+[node name="Close" type="Button" parent="." unique_id=1258937109]
+unique_name_in_owner = true
+visible = false
+offset_left = 791.0
+offset_top = 470.0
+offset_right = 897.4516
+offset_bottom = 536.0
+theme_override_font_sizes/font_size = 32
+text = "Close"
+script = ExtResource("56_1cyxo")
+
+[connection signal="visibility_changed" from="Keypad" to="keypad_body" method="_on_keypad_visibility_changed"]
 [connection signal="pressed" from="Keypad/0" to="keypad_body" method="_on_0_pressed"]
 [connection signal="pressed" from="Keypad/9" to="keypad_body" method="_on_9_pressed"]
 [connection signal="pressed" from="Keypad/8" to="keypad_body" method="_on_8_pressed"]
@@ -1456,6 +1414,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="Keypad/3" to="keypad_body" method="_on_3_pressed"]
 [connection signal="pressed" from="Keypad/2" to="keypad_body" method="_on_2_pressed"]
 [connection signal="pressed" from="Keypad/1" to="keypad_body" method="_on_1_pressed"]
+[connection signal="visibility_changed" from="Keypad2" to="keypad_body2" method="_on_keypad_2_visibility_changed"]
 [connection signal="pressed" from="Keypad2/0_plane" to="keypad_body2" method="_on_0_plane_pressed"]
 [connection signal="pressed" from="Keypad2/9_plane" to="keypad_body2" method="_on_9_plane_pressed"]
 [connection signal="pressed" from="Keypad2/8_plane" to="keypad_body2" method="_on_8_plane_pressed"]
@@ -1466,6 +1425,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="Keypad2/3_plane" to="keypad_body2" method="_on_3_plane_pressed"]
 [connection signal="pressed" from="Keypad2/2_plane" to="keypad_body2" method="_on_2_plane_pressed"]
 [connection signal="pressed" from="Keypad2/1_plane" to="keypad_body2" method="_on_1_plane_pressed"]
+[connection signal="visibility_changed" from="Keypad3" to="plane/Handel" method="_on_keypad_3_visibility_changed"]
 [connection signal="pressed" from="Keypad3/0_pit" to="plane/Handel" method="_on_0_pit_pressed"]
 [connection signal="pressed" from="Keypad3/9_pit" to="plane/Handel" method="_on_9_pit_pressed"]
 [connection signal="pressed" from="Keypad3/8_pit" to="plane/Handel" method="_on_8_pit_pressed"]
@@ -1477,5 +1437,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="Keypad3/2_pit" to="plane/Handel" method="_on_2_pit_pressed"]
 [connection signal="pressed" from="Keypad3/1_pit" to="plane/Handel" method="_on_1_pit_pressed"]
 [connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_clock_timer_timeout"]
+[connection signal="pressed" from="Close" to="Close" method="_on_pressed"]
 
 [editable path="bathroom_body/Bathroom2"]
+[editable path="plane/cocisc/cockpit"]

@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 var has_hammer = false
-var has_screwdriver = true
+var has_screwdriver = false
 var sensitivity : float = 0.5
 @export var captured : bool = true
 var speed : int = 10

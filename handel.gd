@@ -23,10 +23,11 @@ func Interact():
 			%Dialogue.dialogueon = true
 			once = true
 	%Keypad3.show()
+	%Close.show()
 	%Player.can_move = false
 	%"E interact".hide()
-	
-
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	%Player.captured = false
 func check_pit():
 	if Code_pit.length() == 4:
 		if Code_pit == "3684":
@@ -108,4 +109,9 @@ func _on_1_pit_pressed() -> void:
 func _on_4_pit_pressed() -> void:
 	Code_pit+="4"
 	check_pit()
+	%Code_pit.text = Code_pit
+
+
+func _on_keypad_3_visibility_changed() -> void:
+	Code_pit = ""
 	%Code_pit.text = Code_pit

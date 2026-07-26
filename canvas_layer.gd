@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export var total_time: int = 1200
+@export var total_time: int = 900
 @onready var countdown_label: Label = %Label
 @onready var clock_timer: Timer = %Timer
 var is_game_over: bool = false
